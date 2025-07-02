@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Sequential Programme">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="quiz.css">
+  <title>Hackix Quiz App</title>
+</head>
+<body>
+  <!-- Confirmation Modal -->
+  <div id="confirm-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <p id="confirm-message">Are you sure you want to submit?</p>
+      <button id="confirm-yes">Yes</button>
+      <button id="confirm-no">No</button>
+    </div>
+  </div>
+  <!-- Question count selector -->
+  <div class="question-count-select">
+    <label for="question-count">How many questions do you want to answer?</label>
+    <div class="select-option">
+      <select id="question-count">
+      <option value="20">20</option>
+      <option value="30">30</option>
+      <option value="50">50</option>
+    </select>
+    <button id="start-quiz">Start Quiz</button>
+    </div>
+  </div>
+
+  <div class="container js-container-form" style="display:none;">
+    <div class="box">
+      <div class="header">
+        <h2>CSC 203 Quiz</h2>
+        <div class="timer">
+          <p>
+            <span class="minute">25</span> : 
+            <span class="second">00</span>
+          </p>
+        </div>
+      </div>
+      <div class="questions-buttons-answers">
+        <div class="question-pagination" id="question-pagination"></div>
+        <div class="questions-options">
+          <p class="question"><span class="num">1</span>: <span id="question"></span></p>
+          <ul class="option" id="options"></ul>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="prev" id="previous">previous</button>
+        <button class="next" id="next">next</button>
+        <button class="submit" id="submit">submit</button>
+      </div>
+    </div>
+  </div>
+  <div class="scores" style="display:none;">
+    <p id="score"></p>
+    <div id="questions-and-answers"></div>
+    <p id="retake-quize">
+      To take another quiz click <span class="render">HERE</span>
+    </p>
+  </div>
+  
+  <script type="module" src="Scripts/quiz.js"></script>
+</body>
+</html>
