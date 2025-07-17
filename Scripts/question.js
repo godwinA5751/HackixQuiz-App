@@ -1,4 +1,4 @@
-export const questions = [
+export const csc203Questions = [
   {
     question: "The following are terms use to explain Programing, except?",
     options: [
@@ -635,5 +635,45 @@ export const questions = [
       "executes a block with no number of iterations", "executes a block for a small number of iterations", "executes a block for a lot number of iterations", "executes a block for a specified number of iterations"
     ],
     correctAnswer: "executes a block for a specified number of iterations"
+  }
+]
+
+export const csc202Questions = [
+  {
+    question: "",
+    options: [
+      "", "", "", ""
+    ],
+    correctAnswer: ""
+  }
+]
+
+export const csc204Questions = [
+  {
+    question: "",
+    options: [
+      "", "", "", ""
+    ],
+    correctAnswer: ""
+  }
+]
+
+export const csc206Questions = [
+  {
+    question: "",
+    options: [
+      "", "", "", ""
+    ],
+    correctAnswer: ""
+  }
+]
+
+export const csc208Questions = [
+  {
+    question: "",
+    options: [
+      "", "", "", ""
+    ],
+    correctAnswer: ""
   }
 ]

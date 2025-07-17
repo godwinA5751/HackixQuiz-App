@@ -120,8 +120,49 @@ body{
   flex-direction: column-reverse;
 }
 
-.question-count-select {
+.courses-select {
   margin: 100px auto 20px auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 0 20px;
+  background: #3f98fd;
+  color: white;
+  border-radius: 8px;
+  width: 30%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.87);
+}
+
+.courses-select button{
+  display: block;
+  margin: 10px auto;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.75em;
+  border-radius: 5px;
+  background: #004bac;
+  color: white;
+  transition: color 0.5s,
+              background 0.4s;
+}
+
+.courses-select button:hover{
+  background: white;
+  color: #004bac;
+}
+
+.courses-select h3{
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+  background: #004bac;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.question-count-select{
+  margin: 100px auto 20px auto;
+  display: none;
   text-align: center;
   padding: 20px;
   background: #3f98fd;
@@ -275,6 +316,9 @@ input:checked{
   .question-count-select {
     width: 70%;
   }
+  .courses-select{
+    width: 50%;
+  }
 }
 @media screen and (max-width: 480px) {
   .container, .scores{
@@ -285,5 +329,8 @@ input:checked{
   }
   .question-count-select {
     width: 90%;
+  }
+  .courses-select{
+    width: 60%;
   }
 }

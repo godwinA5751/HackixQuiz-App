@@ -1,4 +1,6 @@
-import { questions } from "./question.js";
+import { csc203Questions, csc202Questions, csc204Questions,
+  csc206Questions, csc208Questions
+ } from "./question.js";
 
 const minutes = document.querySelector('.minute');
 const seconds = document.querySelector('.second');
@@ -13,6 +15,273 @@ let randomQuestions = []; // Array to hold randomly selected questions
 let currentQuestionIndex = 0; // Index of the current question (0-based)
 let userAnswers = {}; // Object to store user's answers
 let shuffledOptionsMap = {}; // Stores shuffled options per question index
+
+//courses selection
+
+const listOfCourses = document.querySelector('.courses-select');
+const questionsSelect = document.querySelector('.question-count-select')
+
+document.querySelector('.js-csc202').addEventListener('click', ()=>{
+  listOfCourses.style.display = 'none';
+  questionsSelect.style.display = 'block';
+  // Randomly selects numQuestions from the questions array
+  function getRandomQuestions(csc202Questions, numQuestions) {
+    const randomQuestions = [];
+    const questionsCopy = csc202Questions.slice();
+
+    for (let i = 0; i < numQuestions; i++) {
+      const randomIndex = Math.floor(Math.random() * questionsCopy.length);
+      randomQuestions.push(questionsCopy.splice(randomIndex, 1)[0]);
+    }
+
+    return randomQuestions;
+    }
+  // Start quiz when user clicks "Start Quiz"
+  document.getElementById("start-quiz").addEventListener("click", () => {
+    const count = parseInt(document.getElementById("question-count").value, 10);
+    randomQuestions = getRandomQuestions(csc202Questions, count);
+    currentQuestionIndex = 0;
+    userAnswers = {};
+    shuffledOptionsMap = {}; // Reset shuffled options for new quiz
+    num = 1;
+
+    // Set timer based on question count
+    if (count === 20) {
+      minute = 10;
+    } else if (count === 30) {
+      minute = 15;
+    } else if (count === 50) {
+      minute = 25;
+    } else {
+      minute = 10; // fallback default
+    }
+    second = 0;
+
+    // Reset timer and UI
+    minutes.innerHTML = String(minute).padStart(2, '0');
+    seconds.innerHTML = String(second).padStart(2, '0');
+    numbers.innerHTML = num;
+    document.querySelector('.question-count-select').style.display = 'none';
+    document.querySelector('.container').style.display = 'block';
+    document.querySelector('.scores').style.display = 'none';
+    displayQuestion();
+    updateNavigationButtons();
+    renderPagination();
+    stopTimer();
+    intervalId = null;
+    startTimer();
+  });
+});
+
+document.querySelector('.js-csc203').addEventListener('click', ()=>{
+  listOfCourses.style.display = 'none';
+  questionsSelect.style.display = 'block';
+  // Randomly selects numQuestions from the questions array
+  function getRandomQuestions(csc203Questions, numQuestions) {
+    const randomQuestions = [];
+    const questionsCopy = csc203Questions.slice();
+
+    for (let i = 0; i < numQuestions; i++) {
+      const randomIndex = Math.floor(Math.random() * questionsCopy.length);
+      randomQuestions.push(questionsCopy.splice(randomIndex, 1)[0]);
+    }
+
+    return randomQuestions;
+    }
+  // Start quiz when user clicks "Start Quiz"
+  document.getElementById("start-quiz").addEventListener("click", () => {
+    const count = parseInt(document.getElementById("question-count").value, 10);
+    randomQuestions = getRandomQuestions(csc203Questions, count);
+    currentQuestionIndex = 0;
+    userAnswers = {};
+    shuffledOptionsMap = {}; // Reset shuffled options for new quiz
+    num = 1;
+
+    // Set timer based on question count
+    if (count === 20) {
+      minute = 10;
+    } else if (count === 30) {
+      minute = 15;
+    } else if (count === 50) {
+      minute = 25;
+    } else {
+      minute = 10; // fallback default
+    }
+    second = 0;
+
+    // Reset timer and UI
+    minutes.innerHTML = String(minute).padStart(2, '0');
+    seconds.innerHTML = String(second).padStart(2, '0');
+    numbers.innerHTML = num;
+    document.querySelector('.question-count-select').style.display = 'none';
+    document.querySelector('.container').style.display = 'block';
+    document.querySelector('.scores').style.display = 'none';
+    displayQuestion();
+    updateNavigationButtons();
+    renderPagination();
+    stopTimer();
+    intervalId = null;
+    startTimer();
+  });
+});
+
+document.querySelector('.js-csc204').addEventListener('click', ()=>{
+  listOfCourses.style.display = 'none';
+  questionsSelect.style.display = 'block';
+  // Randomly selects numQuestions from the questions array
+  function getRandomQuestions(csc204Questions, numQuestions) {
+    const randomQuestions = [];
+    const questionsCopy = csc204Questions.slice();
+
+    for (let i = 0; i < numQuestions; i++) {
+      const randomIndex = Math.floor(Math.random() * questionsCopy.length);
+      randomQuestions.push(questionsCopy.splice(randomIndex, 1)[0]);
+    }
+
+    return randomQuestions;
+    }
+  // Start quiz when user clicks "Start Quiz"
+  document.getElementById("start-quiz").addEventListener("click", () => {
+    const count = parseInt(document.getElementById("question-count").value, 10);
+    randomQuestions = getRandomQuestions(csc204Questions, count);
+    currentQuestionIndex = 0;
+    userAnswers = {};
+    shuffledOptionsMap = {}; // Reset shuffled options for new quiz
+    num = 1;
+
+    // Set timer based on question count
+    if (count === 20) {
+      minute = 10;
+    } else if (count === 30) {
+      minute = 15;
+    } else if (count === 50) {
+      minute = 25;
+    } else {
+      minute = 10; // fallback default
+    }
+    second = 0;
+
+    // Reset timer and UI
+    minutes.innerHTML = String(minute).padStart(2, '0');
+    seconds.innerHTML = String(second).padStart(2, '0');
+    numbers.innerHTML = num;
+    document.querySelector('.question-count-select').style.display = 'none';
+    document.querySelector('.container').style.display = 'block';
+    document.querySelector('.scores').style.display = 'none';
+    displayQuestion();
+    updateNavigationButtons();
+    renderPagination();
+    stopTimer();
+    intervalId = null;
+    startTimer();
+  });
+});
+
+document.querySelector('.js-csc206').addEventListener('click', ()=>{
+  listOfCourses.style.display = 'none';
+  questionsSelect.style.display = 'block';
+  // Randomly selects numQuestions from the questions array
+  function getRandomQuestions(csc206Questions, numQuestions) {
+    const randomQuestions = [];
+    const questionsCopy = csc206Questions.slice();
+
+    for (let i = 0; i < numQuestions; i++) {
+      const randomIndex = Math.floor(Math.random() * questionsCopy.length);
+      randomQuestions.push(questionsCopy.splice(randomIndex, 1)[0]);
+    }
+
+    return randomQuestions;
+    }
+  // Start quiz when user clicks "Start Quiz"
+  document.getElementById("start-quiz").addEventListener("click", () => {
+    const count = parseInt(document.getElementById("question-count").value, 10);
+    randomQuestions = getRandomQuestions(csc206Questions, count);
+    currentQuestionIndex = 0;
+    userAnswers = {};
+    shuffledOptionsMap = {}; // Reset shuffled options for new quiz
+    num = 1;
+
+    // Set timer based on question count
+    if (count === 20) {
+      minute = 10;
+    } else if (count === 30) {
+      minute = 15;
+    } else if (count === 50) {
+      minute = 25;
+    } else {
+      minute = 10; // fallback default
+    }
+    second = 0;
+
+    // Reset timer and UI
+    minutes.innerHTML = String(minute).padStart(2, '0');
+    seconds.innerHTML = String(second).padStart(2, '0');
+    numbers.innerHTML = num;
+    document.querySelector('.question-count-select').style.display = 'none';
+    document.querySelector('.container').style.display = 'block';
+    document.querySelector('.scores').style.display = 'none';
+    displayQuestion();
+    updateNavigationButtons();
+    renderPagination();
+    stopTimer();
+    intervalId = null;
+    startTimer();
+  });
+});
+
+document.querySelector('.js-csc208').addEventListener('click', ()=>{
+  listOfCourses.style.display = 'none';
+  questionsSelect.style.display = 'block';
+  // Randomly selects numQuestions from the questions array
+  function getRandomQuestions(csc208Questions, numQuestions) {
+    const randomQuestions = [];
+    const questionsCopy = csc208Questions.slice();
+
+    for (let i = 0; i < numQuestions; i++) {
+      const randomIndex = Math.floor(Math.random() * questionsCopy.length);
+      randomQuestions.push(questionsCopy.splice(randomIndex, 1)[0]);
+    }
+
+    return randomQuestions;
+    }
+  // Start quiz when user clicks "Start Quiz"
+  document.getElementById("start-quiz").addEventListener("click", () => {
+    const count = parseInt(document.getElementById("question-count").value, 10);
+    randomQuestions = getRandomQuestions(csc208Questions, count);
+    currentQuestionIndex = 0;
+    userAnswers = {};
+    shuffledOptionsMap = {}; // Reset shuffled options for new quiz
+    num = 1;
+
+    // Set timer based on question count
+    if (count === 20) {
+      minute = 10;
+    } else if (count === 30) {
+      minute = 15;
+    } else if (count === 50) {
+      minute = 25;
+    } else {
+      minute = 10; // fallback default
+    }
+    second = 0;
+
+    // Reset timer and UI
+    minutes.innerHTML = String(minute).padStart(2, '0');
+    seconds.innerHTML = String(second).padStart(2, '0');
+    numbers.innerHTML = num;
+    document.querySelector('.question-count-select').style.display = 'none';
+    document.querySelector('.container').style.display = 'block';
+    document.querySelector('.scores').style.display = 'none';
+    displayQuestion();
+    updateNavigationButtons();
+    renderPagination();
+    stopTimer();
+    intervalId = null;
+    startTimer();
+  });
+});
+
+
 
 // --- Pagination rendering ---
 // Renders the question navigation buttons (pagination)
@@ -48,18 +317,7 @@ function renderPagination() {
   });
 }
 
-// Randomly selects numQuestions from the questions array
-function getRandomQuestions(questions, numQuestions) {
-  const randomQuestions = [];
-  const questionsCopy = questions.slice();
 
-  for (let i = 0; i < numQuestions; i++) {
-    const randomIndex = Math.floor(Math.random() * questionsCopy.length);
-    randomQuestions.push(questionsCopy.splice(randomIndex, 1)[0]);
-  }
-
-  return randomQuestions;
-}
 
 // Starts the countdown timer
 function startTimer() {
@@ -311,41 +569,7 @@ function displayQuestionsAndAnswers() {
 document.querySelector('.container').style.display = 'none';
 document.querySelector('.scores').style.display = 'none';
 
-// Start quiz when user clicks "Start Quiz"
-document.getElementById("start-quiz").addEventListener("click", () => {
-  const count = parseInt(document.getElementById("question-count").value, 10);
-  randomQuestions = getRandomQuestions(questions, count);
-  currentQuestionIndex = 0;
-  userAnswers = {};
-  shuffledOptionsMap = {}; // Reset shuffled options for new quiz
-  num = 1;
 
-  // Set timer based on question count
-  if (count === 20) {
-    minute = 10;
-  } else if (count === 30) {
-    minute = 15;
-  } else if (count === 50) {
-    minute = 25;
-  } else {
-    minute = 10; // fallback default
-  }
-  second = 0;
-
-  // Reset timer and UI
-  minutes.innerHTML = String(minute).padStart(2, '0');
-  seconds.innerHTML = String(second).padStart(2, '0');
-  numbers.innerHTML = num;
-  document.querySelector('.question-count-select').style.display = 'none';
-  document.querySelector('.container').style.display = 'block';
-  document.querySelector('.scores').style.display = 'none';
-  displayQuestion();
-  updateNavigationButtons();
-  renderPagination();
-  stopTimer();
-  intervalId = null;
-  startTimer();
-});
 
 // "Next" button event
 document.getElementById("next").addEventListener("click", () => {
