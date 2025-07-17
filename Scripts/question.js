@@ -640,11 +640,794 @@ export const csc203Questions = [
 
 export const csc202Questions = [
   {
-    question: "",
+    question: "What is a graph in data structures?",
     options: [
-      "", "", "", ""
+      "A collection of nodes connected in a parent-child relationship",
+      "A collection of vertices connected by edges",
+      "A visual representation of data",
+      "A type of tree structure"
     ],
-    correctAnswer: ""
+    answer: "A collection of vertices connected by edges"
+  },
+  {
+    question: "Which of the following is NOT a type of graph?",
+    options: [
+      "Directed",
+      "Undirected",
+      "Weighted",
+      "Linear"
+    ],
+    answer: "Linear"
+  },
+  {
+    question: "What is a path in a graph?",
+    options: [
+      "A sequence of vertices where each adjacent pair is connected by an edge",
+      "The longest route between two vertices",
+      "The shortest route between two vertices",
+      "A cycle that visits all vertices"
+    ],
+    answer: "A sequence of vertices where each adjacent pair is connected by an edge"
+  },
+  {
+    question: "What is the time complexity of Depth-First Search (DFS) on a graph with V vertices and E edges?",
+    options: ["O(V)", "O(E)", "O(V + E)", "O(V * E)"],
+    answer: "O(V + E)"
+  },
+  {
+    question: "Which graph representation uses a V x V matrix?",
+    options: [
+      "Adjacency List",
+      "Adjacency Matrix",
+      "Edge List",
+      "Incidence Matrix"
+    ],
+    answer: "Adjacency Matrix"
+  },
+  {
+    question: "What is a connected graph?",
+    options: [
+      "A graph where all vertices have the same degree",
+      "A graph with no cycles",
+      "A graph where there is a path between every pair of vertices",
+      "A graph where all edges are directed"
+    ],
+    answer: "A graph where there is a path between every pair of vertices"
+  },
+  {
+    question: "Which algorithm is used to find the shortest path in an unweighted graph?",
+    options: [
+      "Dijkstra's Algorithm",
+      "Breadth-First Search",
+      "Depth-First Search",
+      "Prim's Algorithm"
+    ],
+    answer: "Breadth-First Search"
+  },
+  {
+    question: "What is a cycle in a graph?",
+    options: [
+      "A path that starts and ends at the same vertex",
+      "The number of edges connected to a vertex",
+      "A graph with no repeated edges",
+      "A traversal that visits all vertices"
+    ],
+    answer: "A path that starts and ends at the same vertex"
+  },
+  {
+    question: "Which of the following is NOT a graph traversal algorithm?",
+    options: [
+      "Breadth-First Search",
+      "Depth-First Search",
+      "Dijkstra's Algorithm",
+      "Level-Order Search"
+    ],
+    answer: "Level-Order Search"
+  },
+  {
+    question: "What is the time complexity of Dijkstra's algorithm with a binary heap?",
+    options: ["O(V)", "O(V log V)", "O(V + E)", "O((V + E) log V)"],
+    answer: "O((V + E) log V)"
+  },
+  {
+    question: "Which algorithm is used to find the minimum spanning tree of a graph?",
+    options: [
+      "Dijkstra's Algorithm",
+      "Bellman-Ford Algorithm",
+      "Prim's Algorithm",
+      "Floyd-Warshall Algorithm"
+    ],
+    answer: "Prim's Algorithm"
+  },
+  {
+    question: "What is a bipartite graph?",
+    options: [
+      "A graph that can be divided into two disjoint sets",
+      "A graph with two connected components",
+      "A graph with edges in both directions",
+      "A graph with exactly two vertices"
+    ],
+    answer: "A graph that can be divided into two disjoint sets"
+  },
+  {
+    question: "Which graph algorithm uses a greedy approach?",
+    options: [
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Kruskal's Algorithm",
+      "Floyd-Warshall Algorithm"
+    ],
+    answer: "Kruskal's Algorithm"
+  },
+  {
+    question: "What is the degree of a vertex in an undirected graph?",
+    options: [
+      "The number of edges connected to it",
+      "Its distance from the root",
+      "The number of paths through it",
+      "Its position in the adjacency list"
+    ],
+    answer: "The number of edges connected to it"
+  },
+  {
+    question: "Which data structure is typically used to implement BFS?",
+    options: ["Stack", "Queue", "Priority Queue", "Heap"],
+    answer: "Queue"
+  },
+  {
+    question: "What is a directed acyclic graph (DAG)?",
+    options: [
+      "A graph with directed edges and no cycles",
+      "A graph with undirected edges and cycles",
+      "A complete graph",
+      "A graph with weighted edges"
+    ],
+    answer: "A graph with directed edges and no cycles"
+  },
+  {
+    question: "Which algorithm is used to detect cycles in a directed graph?",
+    options: [
+      "BFS",
+      "DFS",
+      "Topological Sort",
+      "Both DFS and Topological Sort"
+    ],
+    answer: "Both DFS and Topological Sort"
+  },
+  {
+    question: "What is the space complexity of an adjacency list representation of a graph?",
+    options: ["O(V)", "O(E)", "O(V + E)", "O(V²)"],
+    answer: "O(V + E)"
+  },
+  {
+    question: "Which graph algorithm is used for finding strongly connected components?",
+    options: [
+      "Kosaraju's Algorithm",
+      "Prim's Algorithm",
+      "Kruskal's Algorithm",
+      "Dijkstra's Algorithm"
+    ],
+    answer: "Kosaraju's Algorithm"
+  },
+  {
+    question: "What is the time complexity of the Floyd-Warshall algorithm?",
+    options: ["O(V)", "O(V²)", "O(V³)", "O(V log V)"],
+    answer: "O(V³)"
+  },
+  {
+    question: "What is the topmost node in a tree called?",
+    options: ["Leaf", "Root", "Branch", "Parent"],
+    answer: "Root"
+  },
+  {
+    question: "Which of the following is NOT a type of tree traversal?",
+    options: [
+      "In-order",
+      "Pre-order",
+      "Post-order",
+      "Side-order"
+    ],
+    answer: "Side-order"
+  },
+  {
+    question: "What is the maximum number of children a node can have in a binary tree?",
+    options: ["1", "2", "Any number", "Depends on the tree size"],
+    answer: "2"
+  },
+  {
+    question: "What is the time complexity of searching in a balanced binary search tree?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+    answer: "O(log n)"
+  },
+  {
+    question: "Which tree property ensures O(log n) search time?",
+    options: [
+      "Being complete",
+      "Being balanced",
+      "Being full",
+      "Being perfect"
+    ],
+    answer: "Being balanced"
+  },
+  {
+    question: "What is a leaf node in a tree?",
+    options: [
+      "A node with no children",
+      "The root node",
+      "A node with exactly one child",
+      "A node with two children"
+    ],
+    answer: "A node with no children"
+  },
+  {
+    question: "Which of the following is NOT a self-balancing binary search tree?",
+    options: [
+      "AVL Tree",
+      "Red-Black Tree",
+      "B-Tree",
+      "Binary Search Tree"
+    ],
+    answer: "Binary Search Tree"
+  },
+  {
+    question: "What is the height of a tree with only a root node?",
+    options: ["0", "1", "2", "Undefined"],
+    answer: "0"
+  },
+  {
+    question: "In a binary search tree, which statement is always true?",
+    options: [
+      "Left child < Parent < Right child",
+      "Left child > Parent > Right child",
+      "Parent is always greater than both children",
+      "Parent is always less than both children"
+    ],
+    answer: "Left child < Parent < Right child"
+  },
+  {
+    question: "What is the time complexity of inserting a node in a balanced BST?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+    answer: "O(log n)"
+  },
+  {
+    question: "Which traversal of a BST gives nodes in sorted order?",
+    options: [
+      "Pre-order",
+      "In-order",
+      "Post-order",
+      "Level-order"
+    ],
+    answer: "In-order"
+  },
+  {
+    question: "What is a complete binary tree?",
+    options: [
+      "A tree where all levels are completely filled",
+      "A tree where all levels except possibly the last are completely filled",
+      "A tree where each node has exactly two children",
+      "A tree with the minimum possible height"
+    ],
+    answer: "A tree where all levels except possibly the last are completely filled"
+  },
+  {
+    question: "What is the maximum number of nodes in a binary tree of height h?",
+    options: ["h", "2h", "2^h - 1", "h^2"],
+    answer: "2^h - 1"
+  },
+  {
+    question: "Which tree is best suited for database indexing?",
+    options: [
+      "Binary Search Tree",
+      "AVL Tree",
+      "B-Tree",
+      "Red-Black Tree"
+    ],
+    answer: "B-Tree"
+  },
+  {
+    question: "What is the main advantage of using a heap?",
+    options: [
+      "Efficient searching",
+      "Efficient finding of min/max",
+      "Balanced structure",
+      "Easy traversal"
+    ],
+    answer: "Efficient finding of min/max"
+  },
+  {
+    question: "In a max-heap, where is the largest element located?",
+    options: [
+      "At any leaf node",
+      "At the root",
+      "At the leftmost node",
+      "At the rightmost node"
+    ],
+    answer: "At the root"
+  },
+  {
+    question: "What is the time complexity of heapify operation?",
+    options: ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    answer: "O(log n)"
+  },
+  {
+    question: "Which of the following is NOT a type of tree?",
+    options: [
+      "Binary Tree",
+      "Ternary Tree",
+      "N-ary Tree",
+      "Circular Tree"
+    ],
+    answer: "Circular Tree"
+  },
+  {
+    question: "What is the space complexity of storing a tree with n nodes?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+    answer: "O(n)"
+  },
+  {
+    question: "Which tree traversal uses a queue data structure?",
+    options: [
+      "Pre-order",
+      "In-order",
+      "Post-order",
+      "Level-order"
+    ],
+    answer: "Level-order"
+  },
+  {
+    question: "Which principle does a stack follow?",
+    options: [
+      "FIFO (First In First Out)",
+      "LIFO (Last In First Out)",
+      "FILO (First In Last Out)",
+      "LILO (Last In Last Out)"
+    ],
+    answer: "LIFO (Last In First Out)"
+  },
+  {
+    question: "What is the time complexity of push and pop operations in a stack?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+    answer: "O(1)"
+  },
+  {
+    question: "Which of the following is NOT a common application of stacks?",
+    options: [
+      "Function call management",
+      "Undo operations",
+      "CPU scheduling",
+      "Expression evaluation"
+    ],
+    answer: "CPU scheduling"
+  },
+  {
+    question: "What is the term for removing an element from a stack?",
+    options: ["Push", "Pop", "Enqueue", "Dequeue"],
+    answer: "Pop"
+  },
+  {
+    question: "Which data structure is used to implement a queue?",
+    options: ["Only arrays", "Only linked lists", "Both arrays and linked lists", "Trees"],
+    answer: "Both arrays and linked lists"
+  },
+  {
+    question: "What is the time complexity of enqueue and dequeue operations in a queue?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+    answer: "O(1)"
+  },
+  {
+    question: "What is a circular queue?",
+    options: [
+      "A queue implemented using a circular linked list",
+      "A queue where the rear connects back to the front",
+      "A special type of priority queue",
+      "A queue with unlimited size"
+    ],
+    answer: "A queue where the rear connects back to the front"
+  },
+  {
+    question: "Which of the following is a common application of queues?",
+    options: [
+      "Recursion",
+      "Browser history",
+      "Print job scheduling",
+      "Balancing parentheses"
+    ],
+    answer: "Print job scheduling"
+  },
+  {
+    question: "What is a priority queue?",
+    options: [
+      "A queue where elements are processed in order of arrival",
+      "A queue where elements have priorities and are processed accordingly",
+      "A queue with two ends",
+      "A queue implemented with a stack"
+    ],
+    answer: "A queue where elements have priorities and are processed accordingly"
+  },
+  {
+    question: "How can you implement a queue using two stacks?",
+    options: [
+      "It's not possible",
+      "By using one stack for enqueue and another for dequeue",
+      "By alternating between stacks for each operation",
+      "By pushing all elements into both stacks"
+    ],
+    answer: "By using one stack for enqueue and another for dequeue"
+  },
+  {
+    question: "What is a deque (double-ended queue)?",
+    options: [
+      "A queue that can only grow from one end",
+      "A queue that allows insertion and deletion at both ends",
+      "A queue with double the capacity",
+      "A queue that uses two separate queues"
+    ],
+    answer: "A queue that allows insertion and deletion at both ends"
+  },
+  {
+    question: "Which operation is NOT associated with a stack?",
+    options: ["Push", "Pop", "Peek", "Dequeue"],
+    answer: "Dequeue"
+  },
+  {
+    question: "What is the postfix notation of A+B*C?",
+    options: ["ABC*+", "AB+C*", "A+BC*", "ABC+*"],
+    answer: "ABC*+"
+  },
+  {
+    question: "What is the main disadvantage of implementing a queue with an array?",
+    options: [
+      "Fixed size",
+      "Slow enqueue operations",
+      "Complex implementation",
+      "Memory waste"
+    ],
+    answer: "Fixed size"
+  },
+  {
+    question: "Which data structure would be best for implementing a job scheduler where the most urgent job should be processed first?",
+    options: ["Stack", "Queue", "Priority Queue", "Linked List"],
+    answer: "Priority Queue"
+  },
+  {
+    question: "What is a node in a linked list composed of?",
+    options: [
+      "Only data",
+      "Data and a pointer to the next node",
+      "Data and two pointers",
+      "Only pointers"
+    ],
+    answer: "Data and a pointer to the next node"
+  },
+  {
+    question: "What is the time complexity of inserting at the beginning of a singly linked list?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+    answer: "O(1)"
+  },
+  {
+    question: "Which of the following is NOT a type of linked list?",
+    options: [
+      "Singly linked list",
+      "Doubly linked list",
+      "Circular linked list",
+      "Linear linked list"
+    ],
+    answer: "Linear linked list"
+  },
+  {
+    question: "What is the advantage of a doubly linked list over a singly linked list?",
+    options: [
+      "Takes less memory",
+      "Can be traversed in both directions",
+      "Faster access to random elements",
+      "Easier to implement"
+    ],
+    answer: "Can be traversed in both directions"
+  },
+  {
+    question: "What is the time complexity of searching in a linked list?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+    answer: "O(n)"
+  },
+  {
+    question: "In a circular linked list, what does the last node point to?",
+    options: [
+      "NULL",
+      "The first node",
+      "A special sentinel node",
+      "Nothing"
+    ],
+    answer: "The first node"
+  },
+  {
+    question: "What is the space complexity of a linked list with n nodes?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+    answer: "O(n)"
+  },
+  {
+    question: "Which operation is more efficient in linked lists compared to arrays?",
+    options: [
+      "Random access",
+      "Insertion/deletion at arbitrary positions",
+      "Binary search",
+      "Memory usage"
+    ],
+    answer: "Insertion/deletion at arbitrary positions"
+  },
+  {
+    question: "What is a sentinel node in a linked list?",
+    options: [
+      "A node that contains the largest value",
+      "A dummy node that simplifies operations",
+      "The first node in the list",
+      "A node that marks the end of the list"
+    ],
+    answer: "A dummy node that simplifies operations"
+  },
+  {
+    question: "How do you detect a cycle in a linked list?",
+    options: [
+      "Using binary search",
+      "Floyd's Cycle-Finding Algorithm",
+      "By counting the nodes",
+      "By reversing the list"
+    ],
+    answer: "Floyd's Cycle-Finding Algorithm"
+  },
+  {
+    question: "What is the time complexity of reversing a singly linked list?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+    answer: "O(n)"
+  },
+  {
+    question: "In a doubly linked list, each node contains:",
+    options: [
+      "One data field and one pointer",
+      "One data field and two pointers",
+      "Two data fields and one pointer",
+      "Two data fields and two pointers"
+    ],
+    answer: "One data field and two pointers"
+  },
+  {
+    question: "Which of these is NOT a disadvantage of linked lists?",
+    options: [
+      "Extra memory for pointers",
+      "No random access",
+      "Poor cache locality",
+      "Fixed size"
+    ],
+    answer: "Fixed size"
+  },
+  {
+    question: "What is the purpose of a head pointer in a linked list?",
+    options: [
+      "To mark the end of the list",
+      "To point to the first node",
+      "To count the number of nodes",
+      "To store metadata about the list"
+    ],
+    answer: "To point to the first node"
+  },
+  {
+    question: "How would you implement a stack using a linked list?",
+    options: [
+      "Insert at head, remove at head",
+      "Insert at tail, remove at tail",
+      "Insert at head, remove at tail",
+      "Insert at tail, remove at head"
+    ],
+    answer: "Insert at head, remove at head"
+  },
+  {
+    question: "What is the index of the first element in an array?",
+    options: ["0", "1", "-1", "Depends on the programming language"],
+    answer: "0"
+  },
+  {
+    question: "What is the time complexity of inserting an element at the end of a dynamic array?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(1) amortized"],
+    answer: "O(1) amortized"
+  },
+  {
+    question: "Which of the following is NOT a disadvantage of arrays?",
+    options: [
+      "Fixed size",
+      "Expensive insertions/deletions",
+      "Fast access to elements",
+      "Memory waste for sparse data"
+    ],
+    answer: "Fast access to elements"
+  },
+  {
+    question: "What is a two-dimensional array commonly called?",
+    options: ["Matrix", "Vector", "Tensor", "Heap"],
+    answer: "Matrix"
+  },
+  {
+    question: "How do you calculate the memory address of an element in a 1D array?",
+    options: [
+      "base_address + (index * element_size)",
+      "base_address * index * element_size",
+      "index / element_size",
+      "base_address - (index * element_size)"
+    ],
+    answer: "base_address + (index * element_size)"
+  },
+  {
+    question: "What is the time complexity of searching an unsorted array?",
+    options: ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+    answer: "O(n)"
+  },
+  {
+    question: "Which operation has O(n) time complexity in arrays?",
+    options: [
+      "Accessing an element by index",
+      "Inserting at the beginning",
+      "Updating an element",
+      "Searching in a sorted array"
+    ],
+    answer: "Inserting at the beginning"
+  },
+  {
+    question: "What is the main advantage of using arrays over linked lists?",
+    options: [
+      "Dynamic size",
+      "Better cache locality",
+      "Easier insertions/deletions",
+      "Lower memory overhead"
+    ],
+    answer: "Better cache locality"
+  },
+  {
+    question: "What is a jagged array?",
+    options: [
+      "An array with irregular row lengths",
+      "A 3D array",
+      "An array with jagged edges",
+      "A corrupted array"
+    ],
+    answer: "An array with irregular row lengths"
+  },
+  {
+    question: "Which algorithm is typically used to sort an array?",
+    options: [
+      "Depth-First Search",
+      "QuickSort",
+      "Dijkstra's Algorithm",
+      "Prim's Algorithm"
+    ],
+    answer: "QuickSort"
+  },
+  {
+    question: "What is the time complexity of reversing an array?",
+    options: ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+    answer: "O(n)"
+  },
+  {
+    question: "Which data structure is typically used to implement a dynamic array?",
+    options: ["Linked List", "Stack", "Static array with resizing", "Queue"],
+    answer: "Static array with resizing"
+  },
+  {
+    question: "What is the maximum number of elements in an array of size n?",
+    options: ["n", "n-1", "n+1", "2n"],
+    answer: "n"
+  },
+  {
+    question: "Which of these is NOT a valid array operation?",
+    options: [
+      "Traversal",
+      "Insertion",
+      "Deletion",
+      "Concatenation of two arrays in O(1) time"
+    ],
+    answer: "Concatenation of two arrays in O(1) time"
+  },
+  {
+    question: "What is the space complexity of storing an n x n 2D array?",
+    options: ["O(1)", "O(n)", "O(n²)", "O(log n)"],
+    answer: "O(n²)"
+  },
+  {
+    question: "What is a data structure?",
+    options: [
+      "A way to organize and store data",
+      "A type of computer hardware",
+      "A programming language",
+      "A database management system"
+    ],
+    answer: "A way to organize and store data"
+  },
+  {
+    question: "Which of the following is NOT a linear data structure?",
+    options: ["Array", "Linked List", "Tree", "Queue"],
+    answer: "Tree"
+  },
+  {
+    question: "What is the time complexity of accessing an element in an array?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+    answer: "O(1)"
+  },
+  {
+    question: "Which data structure follows the LIFO principle?",
+    options: ["Queue", "Stack", "Array", "Linked List"],
+    answer: "Stack"
+  },
+  {
+    question: "What is the main advantage of using linked lists over arrays?",
+    options: [
+      "Faster access time",
+      "Dynamic size",
+      "Lower memory usage",
+      "Built-in sorting"
+    ],
+    answer: "Dynamic size"
+  },
+  {
+    question: "Which of the following is an example of a non-linear data structure?",
+    options: ["Array", "Stack", "Graph", "Queue"],
+    answer: "Graph"
+  },
+  {
+    question: "What does FIFO stand for in data structures?",
+    options: [
+      "First In First Out",
+      "First In Fixed Output",
+      "Fast In Fast Out",
+      "Fixed Input Fixed Output"
+    ],
+    answer: "First In First Out"
+  },
+  {
+    question: "Which operation is NOT typically associated with data structures?",
+    options: ["Insertion", "Deletion", "Traversal", "Compilation"],
+    answer: "Compilation"
+  },
+  {
+    question: "What is the worst-case time complexity of linear search in an array?",
+    options: ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+    answer: "O(n)"
+  },
+  {
+    question: "Which data structure is best suited for implementing a browser's back button?",
+    options: ["Queue", "Array", "Stack", "Linked List"],
+    answer: "Stack"
+  },
+  {
+    question: "What is the space complexity of an algorithm?",
+    options: [
+      "Time taken to execute the algorithm",
+      "Amount of memory used by the algorithm",
+      "Number of operations performed",
+      "Size of the input data"
+    ],
+    answer: "Amount of memory used by the algorithm"
+  },
+  {
+    question: "Which data structure uses pointers to connect elements?",
+    options: ["Array", "Stack", "Linked List", "Queue"],
+    answer: "Linked List"
+  },
+  {
+    question: "What is the time complexity of binary search in a sorted array?",
+    options: ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    answer: "O(log n)"
+  },
+  {
+    question: "Which of the following is NOT a characteristic of a good algorithm?",
+    options: [
+      "Correctness",
+      "Finiteness",
+      "Ambiguity",
+      "Effectiveness"
+    ],
+    answer: "Ambiguity"
+  },
+  {
+    question: "What data structure would be most appropriate for implementing a print job queue?",
+    options: ["Stack", "Queue", "Tree", "Graph"],
+    answer: "Queue"
   }
 ]
 
