@@ -638,7 +638,7 @@ export const csc203Questions = [
   }
 ]
 
-export const csc202Questions = [
+export const csc204Questions = [
   {
     question: "What is a graph in data structures?",
     options: [
@@ -1431,7 +1431,7 @@ export const csc202Questions = [
   }
 ]
 
-export const csc204Questions = [
+export const csc202Questions = [
   {
     question: "",
     options: [
