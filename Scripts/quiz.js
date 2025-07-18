@@ -644,5 +644,5 @@ function shuffleArray(array) {
 document.querySelector('.render').addEventListener('click', () => {
   document.querySelector('.container').style.display = 'none';
   document.querySelector('.scores').style.display = 'none';
-  document.querySelector('.question-count-select').style.display = 'block';
+  document.querySelector('.courses-select').style.display = 'block';
 });
