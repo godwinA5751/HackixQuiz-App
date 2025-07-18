@@ -479,7 +479,7 @@ function handleSubmit(skipConfirm = false) {
   }
 
   // Show custom modal for confirmation
-  // showConfirmModal();
+  showConfirmModal();
 }
 
 // Show the custom confirmation modal
@@ -490,8 +490,7 @@ function showConfirmModal() {
   // Yes button: submit and show score
   document.getElementById('confirm-yes').onclick = function() {
     modal.style.display = 'none';
-    handleSubmit();
-    finishQuiz();
+    handleSubmit(true); // Only this!
   };
 
   // No button: close modal, do nothing
