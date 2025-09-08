@@ -19,7 +19,8 @@ let shuffledOptionsMap = {}; // Stores shuffled options per question index
 //courses selection
 
 const listOfCourses = document.querySelector('.courses-select');
-const questionsSelect = document.querySelector('.question-count-select')
+const questionsSelect = document.querySelector('.question-count-select');
+const courseCode = document.querySelector('.course-code');
 
 document.querySelector('.js-csc202').addEventListener('click', ()=>{
   listOfCourses.style.display = 'none';
@@ -28,6 +29,8 @@ document.querySelector('.js-csc202').addEventListener('click', ()=>{
   function getRandomQuestions(csc202Questions, numQuestions) {
     const randomQuestions = [];
     const questionsCopy = csc202Questions.slice();
+
+    courseCode.textContent = "CSC202";
 
     for (let i = 0; i < numQuestions; i++) {
       const randomIndex = Math.floor(Math.random() * questionsCopy.length);
@@ -81,6 +84,8 @@ document.querySelector('.js-csc203').addEventListener('click', ()=>{
     const randomQuestions = [];
     const questionsCopy = csc203Questions.slice();
 
+    courseCode.textContent = "CSC203";
+
     for (let i = 0; i < numQuestions; i++) {
       const randomIndex = Math.floor(Math.random() * questionsCopy.length);
       randomQuestions.push(questionsCopy.splice(randomIndex, 1)[0]);
@@ -132,6 +137,8 @@ document.querySelector('.js-csc204').addEventListener('click', ()=>{
   function getRandomQuestions(csc204Questions, numQuestions) {
     const randomQuestions = [];
     const questionsCopy = csc204Questions.slice();
+
+    courseCode.textContent = "CSC204";
 
     for (let i = 0; i < numQuestions; i++) {
       const randomIndex = Math.floor(Math.random() * questionsCopy.length);
@@ -185,6 +192,8 @@ document.querySelector('.js-csc206').addEventListener('click', ()=>{
     const randomQuestions = [];
     const questionsCopy = csc206Questions.slice();
 
+    courseCode.textContent = "CSC206";
+
     for (let i = 0; i < numQuestions; i++) {
       const randomIndex = Math.floor(Math.random() * questionsCopy.length);
       randomQuestions.push(questionsCopy.splice(randomIndex, 1)[0]);
@@ -236,6 +245,8 @@ document.querySelector('.js-csc208').addEventListener('click', ()=>{
   function getRandomQuestions(csc208Questions, numQuestions) {
     const randomQuestions = [];
     const questionsCopy = csc208Questions.slice();
+
+    courseCode.textContent = "CSC208";
 
     for (let i = 0; i < numQuestions; i++) {
       const randomIndex = Math.floor(Math.random() * questionsCopy.length);

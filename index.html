@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Sequential Programme">
+  <meta name="description" content="CSC Courses">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="quiz.css">
   <title>Hackix Quiz App</title>
@@ -20,9 +20,9 @@
   <!-- Courses selector -->
   <div class="courses-select">
     <h3>Choose a course</h3>
-    <button class="course js-csc202">CSC 202</button>
+    <button class="course js-csc202" style="display: none;">CSC 202</button>
     <button class="course js-csc203">CSC 203</button>
-    <button class="course js-csc204" style="display: none;">CSC 204</button>
+    <button class="course js-csc204">CSC 204</button>
     <button class="course js-csc206" style="display: none;">CSC 206</button>
     <button class="course js-csc208" style="display: none;">CSC 208</button>
   </div>
@@ -42,7 +42,7 @@
   <div class="container js-container-form" style="display:none;">
     <div class="box">
       <div class="header">
-        <h2>CSC 203 Quiz</h2>
+        <h2 class="course-code"></h2>
         <div class="timer">
           <p>
             <span class="minute">25</span> : 
