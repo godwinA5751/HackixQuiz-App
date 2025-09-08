@@ -5,6 +5,11 @@
 }
 body{
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url('./lucas.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 .modal {
   position: fixed;
